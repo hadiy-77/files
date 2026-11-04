@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Public File Viewer</title>
+      <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+      <div class="container">
+          <header>
+              <h1>Public File Viewer</h1>
+              <p>Upload files to: Hadiy-77/public-files</p>
+          </header>
+
+          <main>
+              <section class="upload-section">
+                  <h2>Upload Instructions</h2>
+                  <ol>
+                      <li>Drag &amp; drop your file into the repo at: <code>files/</code></li>
+                      <li>View at: <code>view.html?file=filename.ext</code></li>
+                  </ol>
+                  <input type="text" id="fileInput" placeholder="Enter filename (e.g., document.pdf)">
+                  <button onclick="viewFile()">View File</button>
+              </section>
+
+              <section class="file-viewer" id="fileViewer" style="display: none;">
+                  <h2 id="fileTitle">File Viewer</h2>
+                  <div id="fileContent"></div>
+                  <button onclick="backToUpload()">Back to Upload</button>
+              </section>
+          </main>
+
+          <footer>
+              <p>Files served from: <code>/files/</code> directory</p>
+          </footer>
+      </div>
+
+      <script src="js/main.js"></script>
+  </body>
+  </html>
